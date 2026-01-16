@@ -1,0 +1,158 @@
+/* γενικές ρυθμίσεις */
+* {
+    box-sizing: border-box; /* εξασφαλίζει ότι το padding δεν αυξάνει το πλάτος των στοιχείων */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* βασική γραμματοσειρά για όλη τη σελίδα */
+}
+
+body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto; /* αυτόματη στοίχηση στο κέντρο */
+    overflow: hidden;
+}
+
+
+header {
+    background: #1a3c34;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 {
+    font-size: 1.5rem;
+}
+
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;  /* αφαίρεση υπογράμμισης συνδέσμων */
+    border-radius: 5px;  /* στρογγυλεμένες γωνίες */
+    margin-left: 10px;
+    transition: all 0.3s ease; /* εφέ κίνησης */
+}
+
+/* εφέ για hover πάνω από το κουμπί */
+.btn:hover {
+    background: #fff;
+    color: #1a3c34;
+}
+
+/* πληροφορίες campus */
+.campus-info {
+    display: flex;  /* flexbox για διάταξη δίπλα δίπλα */
+    flex-wrap: wrap;  /* επιτρέπει την αναδίπλωση σε μικρές οθόνες */
+    margin: 20px 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.campus-info .text-content,
+.campus-info .image-content {
+    flex: 1;  /* και τα δύο τμήματα πιάνουν ίσο χώρο */
+    padding: 10px;
+    min-width: 300px;  /* ελάχιστο πλάτος πριν την αναδίπλωση */
+}
+
+.campus-info img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* τμήμα χάρτη */
+.map-section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* υποσέλιδο */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1a3c34;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* responsive design (για κινητές συσκευές) */
+@media (max-width: 768px) {
+    .campus-info {
+        flex-direction: column;
+    }
+}
+
+/* Φόρμες */
+.form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 30px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* μήνυμα λάθους */
+.error-msg {
+    color: red;
+    background: #ffe6e6;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* μήνυμα επιτυχίας */
+.success-msg {
+    color: green;
+    background: #e6ffe6;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
